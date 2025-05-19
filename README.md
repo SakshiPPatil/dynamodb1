@@ -29,6 +29,14 @@ Allows for flexible queries based on attributes other than the primary key.<br/>
 
 <h3>Key points in dynamodb:</h3>
 
+**partition key:** <br/>
+It acts as a primary key component, used to efficiently retrieve items based on a specific attribute value. Items with the same partition key value are grouped together within a partition and can be further sorted by a sort key. 
+<br />
+
+**sort key:** <br/>
+The sort key of an item is also known as its range attribute. The term range attribute derives from the way DynamoDB stores items with the same partition key 
+<br/>
+
 **read capacity unit:** <br/>
 DynamoDB measures read operations in RCUs, which determine the amount of data you can read per second. <br/>
 
@@ -44,4 +52,16 @@ A strongly consistent read consumes one RCU per 4KB of data read per second. For
 **write capacity unit:** <br/>
 DynamoDB measures write operations in WCUs, which determine the amount of data you can store per second. <br/>
 ![Screenshot 2025-05-18 174859](https://github.com/user-attachments/assets/b68edb66-1315-4fdc-b6c3-83080a923aac)
+<br/>
+
+**Global Table:**<br/>
+It is used to create the replica of the table in various region.
+<br/>
+
+**Local Secondary index:** <br/>
+A local secondary index maintains an alternate sort key for a given partition key value.A local secondary index has the same partition key as the base table but a different sort key.
+<br/>
+
+**Global Secondary index:** <br/>
+A global secondary index is an index with a partition key and sort key that can be different from the base table
 <br/>
